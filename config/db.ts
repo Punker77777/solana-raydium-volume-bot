@@ -1,13 +1,14 @@
 import mongoose from 'mongoose'
+import { MONGO_URL } from '../constants';
 
 export const connectMongoDB = function () {
   var isConnected = false;
-  let MONGO_URL = `mongodb+srv://coinmajesty:s1mYcfhyDMjBiYle@cluster0.vgdwm1l.mongodb.net/xbot`
+  let url = MONGO_URL
   var connect = function () {
     try {
-      if (MONGO_URL) {
+      if (url) {
         // @ts-ignore
-        mongoose.connect(MONGO_URL).then(function (connection) {
+        mongoose.connect(url).then(function (connection) {
           console.log('MONGODB CONNECTED');
           // console.log('MONGODB CONNECTED : ' + connection.connection.host);
           isConnected = true;

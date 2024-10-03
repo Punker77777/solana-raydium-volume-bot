@@ -35,6 +35,8 @@ export const JITO_KEY = retrieveEnvVariable('JITO_KEY', logger)
 export const BLOCKENGINE_URL = retrieveEnvVariable('BLOCKENGINE_URL', logger)
 export const JITO_FEE = Number(retrieveEnvVariable('JITO_FEE', logger))
 
+export const MONGO_URL = retrieveEnvVariable('MONGO_URL', logger)
+
 export const SOLANA_CONNECTION = new Connection(RPC_ENDPOINT, {
   wsEndpoint: RPC_WEBSOCKET_ENDPOINT,
 });
